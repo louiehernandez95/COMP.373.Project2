@@ -44,6 +44,8 @@ public class Main
         floors.setNumFacility(1);
         floors.setNumRooms(12);
         floors.setPersonCapacity(50);
+        //Spring to inject the right object implementation in Floors using Setter Injection
+        Inspection inspection = (Inspection) context.getBean("inspection");
 
         /*
         Address address_1 = new Address ("1", "1125 W Loyola Ave", "Chicago","IL","60626","United States");

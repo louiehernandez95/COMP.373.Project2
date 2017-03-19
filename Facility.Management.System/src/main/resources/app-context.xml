@@ -10,6 +10,6 @@
     <bean id="address" class="Student_Detail.AddressImpl" scope="prototype"/>
     <bean id="student" class="Student_Detail.StudentImpl" scope="prototype"/>
     <bean id="floors" class="Facility.FloorsImpl" scope="prototype"/>
-
+    <bean id="inspection" class="Facility.InspectionImpl" scope="prototype"/>
 
 </beans>
