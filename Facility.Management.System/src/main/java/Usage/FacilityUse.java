@@ -2,11 +2,14 @@ package Usage;
 
 import Facility.Facility_Interface;
 import Facility.Inspection;
+import Facility.InspectionImpl;
 import Student_Detail.Student;
-
+import Student_Detail.StudentImpl;
 
 
 public class FacilityUse implements Use_Interface{
+    private StudentImpl student;
+    private InspectionImpl inspection;
 
     //Use this method for facility open date
 
@@ -42,6 +45,22 @@ public class FacilityUse implements Use_Interface{
 
     public void listActualUsage(Facility_Interface facility) {
         System.out.println(facility.getUsage());
+    }
+
+    public void setStudent(StudentImpl student) {
+        this.student = student;
+    }
+
+    public StudentImpl getStudent() {
+        return student;
+    }
+
+    public void setInspection(InspectionImpl inspection) {
+        this.inspection = inspection;
+    }
+
+    public InspectionImpl getInspection() {
+        return inspection;
     }
 /*
 //Calculate usage rate for multiple facilities.

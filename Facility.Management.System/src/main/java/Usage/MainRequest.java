@@ -6,15 +6,17 @@ import java.util.Map.Entry;
 import Facility.Facility;
 import Facility.Facility_Interface;
 import Facility_Maintenance.Maintenance;
+import Facility_Maintenance.MaintenanceImpl;
 
 public class MainRequest implements MaintenanceUsage_Interface{
 
-    private Facility facility;
-    private Maintenance maintenance;
     private ArrayList<Facility_Interface> facilities = new ArrayList<Facility_Interface>();
     public HashMap<Maintenance,Facility_Interface> maintenanceRequests = new HashMap<Maintenance,Facility_Interface>();
     public HashMap<Facility_Interface, ArrayList<Maintenance>> scheduledMaintenances = new HashMap<Facility_Interface, ArrayList<Maintenance>>();
     private ArrayList <Facility_Interface> temp = new ArrayList<Facility_Interface>();
+    private MaintenanceImpl maintenance;
+    private Facility facility;
+
     public MainRequest(){}
 
     //interfaces methods begin here
@@ -91,4 +93,19 @@ public class MainRequest implements MaintenanceUsage_Interface{
     }
 
 
+    public void setMaintenance(MaintenanceImpl maintenance) {
+        this.maintenance = maintenance;
+    }
+
+    public MaintenanceImpl getMaintenance() {
+        return maintenance;
+    }
+
+    public void setFacility(Facility facility) {
+        this.facility = facility;
+    }
+
+    public Facility getFacility() {
+        return facility;
+    }
 }

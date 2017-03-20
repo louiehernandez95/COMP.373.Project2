@@ -7,16 +7,6 @@
 
     <description>Wiring the dependencies for the Facility Management System.</description>
     <context:component-scan base-package="Main" />
-    <!-- ********** Student_Detail ********** -->
-
-    <bean id="address"
-          class="Student_Detail.AddressImpl"
-          scope="prototype">
-    </bean>
-    <bean id="student"
-          class="Student_Detail.StudentImpl"
-          scope="prototype">
-    </bean>
 
     <!-- ********** Facility ********** -->
     <bean id="facility"
@@ -38,10 +28,22 @@
           class="Facility.UnitImpl"
           scope="prototype">
     </bean>
+    <!-- ********** Student_Detail ********** -->
+
+    <bean id="address"
+          class="Student_Detail.AddressImpl"
+          scope="prototype">
+    </bean>
+    <bean id="student"
+          class="Student_Detail.StudentImpl"
+          scope="prototype">
+
+    </bean>
     <!-- ********** Facility_Maintenance ********** -->
     <bean id="maintenance"
           class="Facility_Maintenance.MaintenanceImpl"
           scope="prototype">
+
     </bean>
     <!-- ********** Usage ********** -->
     <bean id="facilityUse"
@@ -52,5 +54,6 @@
     <bean id="maintenanceUsage"
           class="Usage.MainRequest"
           scope="prototype">
+
     </bean>
 </beans>

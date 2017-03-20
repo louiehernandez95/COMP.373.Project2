@@ -8,9 +8,8 @@ import Facility.Unit;
 import Facility_Maintenance.Maintenance;
 import Student_Detail.Address;
 import Student_Detail.Student;
-import Usage.FacilityUse;
-import Usage.MainRequest;
 import Usage.Use_Interface;
+
 import Usage.MaintenanceUsage_Interface;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -56,10 +55,10 @@ public class Main
         //Spring to inject the right object implementation in Student
         Student student = (Student) context.getBean("student");
         student.setId("1");
-        student.setDateOfBirth("11-01-95");
         student.setFirstName("Louie");
         student.setLastName("Hernandez");
-
+        student.setDateOfBirth("11-01-95");
+        student.usesFacility.add(facility);
         //Spring to inject the right object implementation in Inspection
         Inspection inspection = (Inspection) context.getBean("inspection");
         inspection.setId("1");
@@ -96,10 +95,11 @@ public class Main
         maintenance_Usage.scheduleMaintenance(facility, temp);
         maintenance_Usage.listMaintenance();
         System.out.println();
-        System.out.println("MAINTENANCE COST FOR FACILITY 1");
+        System.out.println("MAINTENANCE COST FOR FACILITY: "+facility.getName());
         maintenance_Usage.calcMaintenanceCost(facility);
         maintenance_Usage.calcDownTime(facility);
         System.out.println("PROBLEM RATE FOR MAINTENANCE: ");
         maintenance_Usage.calcProblemRate(facility);
+        System.out.println("***************** End Of Program ******************");
     }
 }

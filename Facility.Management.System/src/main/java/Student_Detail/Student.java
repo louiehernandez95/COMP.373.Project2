@@ -5,20 +5,20 @@ import Facility.Facility_Interface;
 import java.util.ArrayList;
 
 public interface Student {
-    public String getId();
-    public void setId(String id);
-    public String getFirstName();
-    public void setFirstName(String FirstName);
-    public String getLastName();
-    public void setLastName(String LastName);
-    public String getFullName();
-    public ArrayList<Address> getAddress();
-    public void addAddress(Address address);
-    public boolean removeAddress(Address address);
-    public String getDateOfBirth();
-    public void setDateOfBirth(String DateOfBirth);
-    public void listPersonFacilities();
-    public ArrayList<Facility_Interface> usesFacility = new ArrayList<Facility_Interface> ();
+    String getId();
+    void setId(String id);
+    String getFirstName();
+    void setFirstName(String FirstName);
+    String getLastName();
+    void setLastName(String LastName);
+    String getFullName();
+    ArrayList<Address> getAddress();
+    void addAddress(Address address);
+    boolean removeAddress(Address address);
+    String getDateOfBirth();
+    void setDateOfBirth(String DateOfBirth);
+    void listPersonFacilities();
+    ArrayList<Facility_Interface> usesFacility = new ArrayList<Facility_Interface> ();
 }
 
 

@@ -1,6 +1,8 @@
 package Student_Detail;
 
 import java.util.ArrayList;
+
+import Facility.Facility;
 import Facility.Facility_Interface;
 
 public class StudentImpl implements Student {
@@ -10,6 +12,7 @@ public class StudentImpl implements Student {
     private String lastName = null;
     private String dateOfBirth = null;
     private ArrayList<Address>address = null;
+    private Facility facility;
 
 
     public StudentImpl(){
@@ -79,4 +82,11 @@ public class StudentImpl implements Student {
             System.out.println(f.getFacilityInfo());
     }
 
+    public void setFacility(Facility facility) {
+        this.facility = facility;
+    }
+
+    public Facility getFacility() {
+        return facility;
+    }
 }

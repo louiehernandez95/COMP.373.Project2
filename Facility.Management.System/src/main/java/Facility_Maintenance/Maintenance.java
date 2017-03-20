@@ -1,6 +1,4 @@
 package Facility_Maintenance;
-import Facility.Facility_Interface;
-import java.util.ArrayList;
 
 public interface Maintenance {
 
