@@ -2,46 +2,18 @@ package Facility_Maintenance;
 import Facility.Facility_Interface;
 import java.util.ArrayList;
 
-public class Maintenance {
-    private String Id;
-    private String Type;
-    private double Cost;
-    private ArrayList<Facility_Interface> facilities = new ArrayList<Facility_Interface>();
+public interface Maintenance {
 
-    public Maintenance(){
-        this.Id = null;
-        this.Type = null;
-        this.Cost = 0.0;
-    }
+    public String getId();
 
-    public Maintenance(String id, String type, double cost){
-        this.Id = id;
-        this.Type = type;
-        this.Cost = cost;
-    }
+    public void setId(String id);
 
-    public String getId() {
-        return Id;
-    }
+    public String getType();
 
-    public void setId(String id) {
-        Id = id;
-    }
+    public void setType(String type);
 
-    public String getType() {
-        return Type;
-    }
+    public void setCost(double cost);
 
-    public void setType(String type) {
-        Type = type;
-    }
-
-    public void setCost(double cost){
-        Cost = cost;
-    }
-
-    public double getCost(){
-        return Cost;
-    }
+    public double getCost();
 
 }

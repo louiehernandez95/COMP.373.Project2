@@ -7,9 +7,50 @@
 
     <description>Wiring the dependencies for the Facility Management System.</description>
     <context:component-scan base-package="Main" />
-    <bean id="address" class="Student_Detail.AddressImpl" scope="prototype"/>
-    <bean id="student" class="Student_Detail.StudentImpl" scope="prototype"/>
-    <bean id="floors" class="Facility.FloorsImpl" scope="prototype"/>
-    <bean id="inspection" class="Facility.InspectionImpl" scope="prototype"/>
+    <!-- ********** Student_Detail ********** -->
 
+    <bean id="address"
+          class="Student_Detail.AddressImpl"
+          scope="prototype">
+    </bean>
+    <bean id="student"
+          class="Student_Detail.StudentImpl"
+          scope="prototype">
+    </bean>
+
+    <!-- ********** Facility ********** -->
+    <bean id="facility"
+          class="Facility.Facility"
+          scope="prototype">
+    </bean>
+
+    <bean id="floors"
+          class="Facility.FloorsImpl"
+          scope="prototype">
+    </bean>
+
+    <bean id="inspection"
+          class="Facility.InspectionImpl"
+          scope="prototype">
+    </bean>
+
+    <bean id="unit"
+          class="Facility.UnitImpl"
+          scope="prototype">
+    </bean>
+    <!-- ********** Facility_Maintenance ********** -->
+    <bean id="maintenance"
+          class="Facility_Maintenance.MaintenanceImpl"
+          scope="prototype">
+    </bean>
+    <!-- ********** Usage ********** -->
+    <bean id="facilityUse"
+          class="Usage.FacilityUse"
+          scope="prototype">
+    </bean>
+
+    <bean id="maintenanceUsage"
+          class="Usage.MainRequest"
+          scope="prototype">
+    </bean>
 </beans>
