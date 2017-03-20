@@ -1,5 +1,7 @@
 package Student_Detail;
 
+import Facility.Facility_Interface;
+
 import java.util.ArrayList;
 
 public interface Student {
@@ -16,6 +18,7 @@ public interface Student {
     public String getDateOfBirth();
     public void setDateOfBirth(String DateOfBirth);
     public void listPersonFacilities();
+    public ArrayList<Facility_Interface> usesFacility = new ArrayList<Facility_Interface> ();
 }
 
 

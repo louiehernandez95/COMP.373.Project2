@@ -5,11 +5,12 @@ import Facility_Maintenance.Maintenance;
 import Student_Detail.Address;
 
 
+
 public class Facility implements Facility_Interface{
 	
 	private String name = null;
 	private String facilityType = null; 
-	private String dimensions = null;
+	private String dimensions = "100*100";
 	private Address address;
 	private int capacity;
 	private String detail = null;
@@ -21,7 +22,7 @@ public class Facility implements Facility_Interface{
 	
 	public Facility(){
 		//if no arguements pass set these as the default
-		this.dimensions = "1000 * 1000";
+		this.dimensions = "100*100";
 		this.address = null;
 		this.capacity = 10;
 		this.facilityType = "General Facility";
@@ -37,7 +38,6 @@ public class Facility implements Facility_Interface{
 		this.capacity = Capacity;
 		inspections = new ArrayList<Inspection>();
 	}
-	
 	public void listUnits() {
 		for (Unit u : Units){
 			System.out.println(u.getId());
@@ -116,6 +116,10 @@ public class Facility implements Facility_Interface{
 	public Address getAddress() {
 
 		return address;
+	}
+	public void setAddress(Address address) {
+
+		this.address = address;
 	}
 	public void setCapacity(int capacity) {
 

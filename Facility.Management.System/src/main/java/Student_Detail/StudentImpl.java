@@ -10,7 +10,7 @@ public class StudentImpl implements Student {
     private String lastName = null;
     private String dateOfBirth = null;
     private ArrayList<Address>address = null;
-    public ArrayList<Facility_Interface> usesFacility = new ArrayList<Facility_Interface> ();
+
 
     public StudentImpl(){
         this.address = new ArrayList<Address>();

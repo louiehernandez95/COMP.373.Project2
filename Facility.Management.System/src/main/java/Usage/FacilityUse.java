@@ -2,7 +2,7 @@ package Usage;
 
 import Facility.Facility_Interface;
 import Facility.Inspection;
-import Student_Detail.StudentImpl;
+import Student_Detail.Student;
 
 
 
@@ -19,12 +19,12 @@ public class FacilityUse implements Use_Interface{
             return false;
     }
     */
-    public void assignFacilityToUse(StudentImpl student, Facility_Interface facility) {
+    public void assignFacilityToUse(Student student, Facility_Interface facility) {
         student.usesFacility.add(facility);
 
     }
 
-    public boolean vacateFacility(StudentImpl student, Facility_Interface facility) {
+    public boolean vacateFacility(Student student, Facility_Interface facility) {
         if (student.usesFacility.contains(facility))
             student.usesFacility.remove(facility);
         return true;
