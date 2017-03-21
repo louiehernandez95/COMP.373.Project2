@@ -1,7 +1,6 @@
 package Facility;
 
 import java.util.ArrayList;
-import Facility_Maintenance.Maintenance;
 import Student_Detail.Address;
 
 public class Facility implements Facility_Interface{
@@ -15,7 +14,6 @@ public class Facility implements Facility_Interface{
 	private static ArrayList<Floors> numFloors;
 	private ArrayList<Unit> Units;
 	public ArrayList<Inspection> inspections = new ArrayList<Inspection>();
-	public ArrayList<Maintenance> maintenances = new ArrayList<Maintenance>();
 	private double usage;
 	public Facility(){
 		//if no arguements pass set these as the default

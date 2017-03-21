@@ -114,4 +114,5 @@ public class MainRequest implements MaintenanceUsage_Interface{
     public ArrayList<Facility_Interface> getFacilities(){
         return facilities;
     }
+
 }
