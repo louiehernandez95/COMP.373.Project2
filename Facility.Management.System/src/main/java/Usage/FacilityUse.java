@@ -2,14 +2,13 @@ package Usage;
 
 import Facility.Facility_Interface;
 import Facility.Inspection;
-import Facility.InspectionImpl;
 import Student_Detail.Student;
-import Student_Detail.StudentImpl;
+
 
 
 public class FacilityUse implements Use_Interface{
-    private StudentImpl student;
-    private InspectionImpl inspection;
+    private Student student;
+    private Inspection inspection;
 
     //Use this method for facility open date
 
@@ -47,19 +46,19 @@ public class FacilityUse implements Use_Interface{
         System.out.println(facility.getUsage());
     }
 
-    public void setStudent(StudentImpl student) {
+    public void setStudent(Student student) {
         this.student = student;
     }
 
-    public StudentImpl getStudent() {
+    public Student getStudent() {
         return student;
     }
 
-    public void setInspection(InspectionImpl inspection) {
+    public void setInspection(Inspection inspection) {
         this.inspection = inspection;
     }
 
-    public InspectionImpl getInspection() {
+    public Inspection getInspection() {
         return inspection;
     }
 /*

@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import Facility_Maintenance.Maintenance;
 import Student_Detail.Address;
 
-
-
 public class Facility implements Facility_Interface{
 	
 	private String name = null;
@@ -14,12 +12,11 @@ public class Facility implements Facility_Interface{
 	private Address address;
 	private int capacity;
 	private String detail = null;
-	private ArrayList<Floors> numFloors;
+	private static ArrayList<Floors> numFloors;
 	private ArrayList<Unit> Units;
-	public ArrayList<Inspection> inspections = new ArrayList<Inspection>(); 
+	public ArrayList<Inspection> inspections = new ArrayList<Inspection>();
 	public ArrayList<Maintenance> maintenances = new ArrayList<Maintenance>();
 	private double usage;
-	
 	public Facility(){
 		//if no arguements pass set these as the default
 		this.dimensions = "100*100";

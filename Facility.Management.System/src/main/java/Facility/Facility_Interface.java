@@ -14,15 +14,15 @@ public interface Facility_Interface {
     ArrayList<Inspection> getInspections();
     void addInspection(Inspection inspection);
     double getUsage();
-    public void setUsage(double use);
-    public String getName();
-    public void setName(String name);
-    public String getFacilityType();
-    public void setFacilityType(String facilityType);
-    public String getDimensions();
-    public void setDimensions(String dimensions);
-    public Address getAddress();
-    public void setAddress(Address address);
-    public void setCapacity(int capacity);
+    void setUsage(double use);
+    String getName();
+    void setName(String name);
+    String getFacilityType();
+    void setFacilityType(String facilityType);
+    String getDimensions();
+    void setDimensions(String dimensions);
+    Address getAddress();
+    void setAddress(Address address);
+    void setCapacity(int capacity);
 
 }

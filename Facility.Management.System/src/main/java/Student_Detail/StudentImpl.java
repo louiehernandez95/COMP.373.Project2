@@ -1,8 +1,6 @@
 package Student_Detail;
 
 import java.util.ArrayList;
-
-import Facility.Facility;
 import Facility.Facility_Interface;
 
 public class StudentImpl implements Student {
@@ -11,82 +9,80 @@ public class StudentImpl implements Student {
     private String firstName = null;
     private String lastName = null;
     private String dateOfBirth = null;
-    private ArrayList<Address>address = null;
-    private Facility facility;
+    private ArrayList<Address> address = null;
+    private Facility_Interface facility;
 
+    public StudentImpl(){}
 
-    public StudentImpl(){
-        this.address = new ArrayList<Address>();
-
-    }
-
-    public StudentImpl(String id, String FirstName, String LastName, String DateOfBirth){
+    public StudentImpl(String id, String FirstName, String LastName, String DateOfBirth) {
         this.id = id;
         this.firstName = FirstName;
         this.lastName = LastName;
         this.dateOfBirth = DateOfBirth;
     }
-
-    public String getId(){
+    public String getId() {
         return this.id;
     }
 
-    public void setId(String id){
+    public void setId(String id) {
         this.id = id;
     }
 
-    public String getFirstName(){
+    public String getFirstName() {
         return this.firstName;
     }
 
-    public void setFirstName(String FirstName){
+    public void setFirstName(String FirstName) {
         this.firstName = FirstName;
     }
 
-    public String getLastName(){
+    public String getLastName() {
         return this.lastName;
     }
 
-    public void setLastName(String LastName){
+    public void setLastName(String LastName) {
         this.lastName = LastName;
     }
 
-    public String getFullName(){
+    public String getFullName() {
         return this.firstName + " " + this.lastName;
     }
 
-    public ArrayList<Address> getAddress(){
+    public ArrayList<Address> getAddress() {
         return this.address;
     }
 
-    public void addAddress(Address address){
+    public void addAddress(Address address) {
         this.address.add(address);
     }
 
-    public boolean removeAddress(Address address){
-        if (this.address.contains(address)){
+    public boolean removeAddress(Address address) {
+        if (this.address.contains(address)) {
             this.address.remove(address);
         }
         return !this.address.contains(address);
     }
-    public String getDateOfBirth(){
+
+    public String getDateOfBirth() {
         return this.dateOfBirth;
     }
 
-    public void setDateOfBirth(String DateOfBirth){
+    public void setDateOfBirth(String DateOfBirth) {
         this.dateOfBirth = DateOfBirth;
     }
 
-    public void listPersonFacilities(){
+    public void listPersonFacilities() {
         for (Facility_Interface f : usesFacility)
             System.out.println(f.getFacilityInfo());
     }
 
-    public void setFacility(Facility facility) {
+    public void setFacility(Facility_Interface facility) {
         this.facility = facility;
     }
 
-    public Facility getFacility() {
+    public Facility_Interface getFacility() {
         return facility;
     }
+
 }
+

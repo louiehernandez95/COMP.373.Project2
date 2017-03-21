@@ -19,6 +19,9 @@ public class AddressImpl implements Address{
         this.country = Country;
     }
 
+    public AddressImpl(String s, String s2, String s23, String s234) {
+    }
+
     public String getId(){
         return this.id;
     }

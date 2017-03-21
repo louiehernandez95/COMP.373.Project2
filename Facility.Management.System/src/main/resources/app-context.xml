@@ -9,25 +9,18 @@
     <context:component-scan base-package="Main" />
 
     <!-- ********** Facility ********** -->
-    <bean id="facility"
-          class="Facility.Facility"
-          scope="prototype">
+    <bean id="facility" class="Facility.Facility" scope="prototype">
+        <property name="address" ref="address"/>
     </bean>
 
-    <bean id="floors"
-          class="Facility.FloorsImpl"
-          scope="prototype">
+    <bean id="floors" class="Facility.FloorsImpl" scope="prototype">
+        <property name="personCapacity" >
+            <value>100</value>
+        </property>
     </bean>
 
-    <bean id="inspection"
-          class="Facility.InspectionImpl"
-          scope="prototype">
-    </bean>
-
-    <bean id="unit"
-          class="Facility.UnitImpl"
-          scope="prototype">
-    </bean>
+    <bean id="inspection" class="Facility.InspectionImpl" scope="prototype"/>
+    <bean id="unit" class="Facility.UnitImpl" scope="prototype"/>
     <!-- ********** Student_Detail ********** -->
 
     <bean id="address"
@@ -37,23 +30,26 @@
     <bean id="student"
           class="Student_Detail.StudentImpl"
           scope="prototype">
-
+        <property name="facility" ref="facility" />
     </bean>
     <!-- ********** Facility_Maintenance ********** -->
     <bean id="maintenance"
           class="Facility_Maintenance.MaintenanceImpl"
           scope="prototype">
-
+        <property name="facility" ref="facility" />
     </bean>
     <!-- ********** Usage ********** -->
     <bean id="facilityUse"
           class="Usage.FacilityUse"
           scope="prototype">
+        <property name="student" ref="student" />
+        <property name="inspection" ref="inspection" />
     </bean>
 
     <bean id="maintenanceUsage"
           class="Usage.MainRequest"
           scope="prototype">
-
+        <property name="facility" ref="facility" />
+        <property name="maintenance" ref="maintenance" />
     </bean>
 </beans>

@@ -36,7 +36,6 @@ public class Main
         floors.setLength(100.0);
         floors.setNumFacility(1);
         floors.setNumRooms(12);
-        floors.setPersonCapacity(50);
         //Spring to inject the right object implementation in Facility
         Facility_Interface facility = (Facility_Interface) context.getBean("facility");
         facility.setName("Mertz Hall");

@@ -2,10 +2,10 @@ package Facility;
 import java.util.ArrayList;
 
 public class FloorsImpl implements Floors {
-    private String id;
     private int personCapacity, numberRooms;
     private double length, width, height;
     private ArrayList<Facility> numberFacility;
+    private String id;
 
     public FloorsImpl() {
         id = null;
@@ -84,5 +84,13 @@ public class FloorsImpl implements Floors {
 
     public void setNumFacility(int numFacility) {
         this.numberFacility = new ArrayList<Facility>(numFacility);
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getId() {
+        return id;
     }
 }

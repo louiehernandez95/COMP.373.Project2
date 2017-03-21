@@ -1,5 +1,5 @@
 package Facility_Maintenance;
-import Facility.Facility;
+
 import Facility.Facility_Interface;
 import java.util.ArrayList;
 
@@ -8,7 +8,7 @@ public class MaintenanceImpl implements Maintenance {
     private String Type;
     private double Cost;
     private ArrayList<Facility_Interface> facilities = new ArrayList<Facility_Interface>();
-    private Facility facility;
+    private Facility_Interface facility;
 
     public MaintenanceImpl(){
         this.Id = null;
@@ -46,11 +46,11 @@ public class MaintenanceImpl implements Maintenance {
         return Cost;
     }
 
-    public void setFacility(Facility facility) {
+    public void setFacility(Facility_Interface facility) {
         this.facility = facility;
     }
 
-    public Facility getFacility() {
+    public Facility_Interface getFacility() {
         return facility;
     }
 }

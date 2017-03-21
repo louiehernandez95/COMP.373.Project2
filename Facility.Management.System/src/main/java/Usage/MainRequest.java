@@ -3,10 +3,8 @@ package Usage;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map.Entry;
-import Facility.Facility;
 import Facility.Facility_Interface;
 import Facility_Maintenance.Maintenance;
-import Facility_Maintenance.MaintenanceImpl;
 
 public class MainRequest implements MaintenanceUsage_Interface{
 
@@ -14,8 +12,8 @@ public class MainRequest implements MaintenanceUsage_Interface{
     public HashMap<Maintenance,Facility_Interface> maintenanceRequests = new HashMap<Maintenance,Facility_Interface>();
     public HashMap<Facility_Interface, ArrayList<Maintenance>> scheduledMaintenances = new HashMap<Facility_Interface, ArrayList<Maintenance>>();
     private ArrayList <Facility_Interface> temp = new ArrayList<Facility_Interface>();
-    private MaintenanceImpl maintenance;
-    private Facility facility;
+    private Maintenance maintenance;
+    private Facility_Interface facility;
 
     public MainRequest(){}
 
@@ -93,19 +91,27 @@ public class MainRequest implements MaintenanceUsage_Interface{
     }
 
 
-    public void setMaintenance(MaintenanceImpl maintenance) {
+    public void setMaintenance(Maintenance maintenance) {
         this.maintenance = maintenance;
     }
 
-    public MaintenanceImpl getMaintenance() {
+    public Maintenance getMaintenance() {
         return maintenance;
     }
 
-    public void setFacility(Facility facility) {
+    public void setFacility(Facility_Interface facility) {
         this.facility = facility;
     }
 
-    public Facility getFacility() {
+    public Facility_Interface getFacility() {
         return facility;
+    }
+
+    public void setFacilities(ArrayList<Facility_Interface> facilities) {
+        this.facilities = facilities;
+    }
+
+    public ArrayList<Facility_Interface> getFacilities(){
+        return facilities;
     }
 }
