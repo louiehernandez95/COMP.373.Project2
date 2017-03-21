@@ -11,7 +11,6 @@ public class FacilityUse implements Use_Interface{
     private Inspection inspection;
 
     //Use this method for facility open date
-
     /*
     public boolean isInUseDuringInterval(int OpenH, int OpenM, int CloseH, int CloseM, int ArrivalH, int ArrivalM) {
         if (OpenH*60+OpenM < ArrivalH*60+ArrivalM < CloseH*60+CloseM)
