@@ -11,7 +11,6 @@ public class MainRequest implements MaintenanceUsage_Interface{
     private ArrayList<Facility_Interface> facilities = new ArrayList<Facility_Interface>();
     public HashMap<Maintenance,Facility_Interface> maintenanceRequests = new HashMap<Maintenance,Facility_Interface>();
     public HashMap<Facility_Interface, ArrayList<Maintenance>> scheduledMaintenances = new HashMap<Facility_Interface, ArrayList<Maintenance>>();
-    private ArrayList <Facility_Interface> temp = new ArrayList<Facility_Interface>();
     private Maintenance maintenance;
     private Facility_Interface facility;
 
@@ -110,9 +109,4 @@ public class MainRequest implements MaintenanceUsage_Interface{
     public void setFacilities(ArrayList<Facility_Interface> facilities) {
         this.facilities = facilities;
     }
-
-    public ArrayList<Facility_Interface> getFacilities(){
-        return facilities;
-    }
-
 }

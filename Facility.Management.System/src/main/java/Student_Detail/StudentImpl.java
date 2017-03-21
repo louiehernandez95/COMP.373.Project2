@@ -9,7 +9,7 @@ public class StudentImpl implements Student {
     private String firstName = null;
     private String lastName = null;
     private String dateOfBirth = null;
-    private ArrayList<Address> address = null;
+    private ArrayList<Address> address=null;
     private Facility_Interface facility;
 
     public StudentImpl(){}

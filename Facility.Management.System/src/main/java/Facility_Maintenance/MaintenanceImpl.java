@@ -1,13 +1,12 @@
 package Facility_Maintenance;
 
 import Facility.Facility_Interface;
-import java.util.ArrayList;
+
 
 public class MaintenanceImpl implements Maintenance {
     private String Id;
     private String Type;
     private double Cost;
-    private ArrayList<Facility_Interface> facilities = new ArrayList<Facility_Interface>();
     private Facility_Interface facility;
 
     public MaintenanceImpl(){
